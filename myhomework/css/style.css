@@ -12,7 +12,7 @@
 			padding-bottom: 10px;
 		}
 	 	p{ text-indent: 2em; /*em是相对单位，2em即现在一个字大小的两倍 p标签自动缩进*/}
-		img{border-radius: 5px;
+		div img{border-radius: 5px;
 			opacity: 0.8;
 			box-shadow: 5px 5px 10px black;
 		}
@@ -25,9 +25,10 @@
 			left: 0;
 			z-index:999;
 			width: 100%; 
-			background: #999d9c;
+			height: 60px;
 			font-size: 15px;
-			opacity: 0.9;
+			border-bottom: 2px solid #C5BDBD;
+			background: white;
 		}
 		nav ul{
 			width: 600px;
@@ -45,20 +46,27 @@
 			/*float: left;*/
 			width: 80px;
 			height: 35px;
-			color: white;
+			color: black;
 			line-height: 35px;
-			background: #999d9c;
 			margin: 5px 10px;
 			text-align: center;
 			text-decoration:none;
-			border-radius: 200px 200px 200px 0px;
 			
 		}
 		nav a:hover{
 			text-decoration: none;
 			background:white;
-			box-shadow:0 0 0 2px #d3d7d4;
-			color:#778899; }
+			color:#2C67CE; 
+			transition:  color .20s linear;
+		}
+		#logo{
+			position: absolute;
+			top: 15px;
+			left: 10%;
+			display: inline-block;
+			width: 70px;
+			height: 40px;
+		}
 		#sidebar{
 			position: fixed;
 			top: 100px;
@@ -105,4 +113,12 @@
 			background: url("../img/bg4.png") no-repeat 0 -26px;
 		}
 
-		
+		#slidorion{
+			position: absolute;
+			margin: 100px auto;
+		}
+		#main{
+			width: 100%;
+			margin-top: 60px;
+			padding-top: 60px;
+		}
