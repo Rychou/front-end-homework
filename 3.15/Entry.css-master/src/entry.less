@@ -1,0 +1,172 @@
+/**
+ * Entry.css
+ *
+ * @author mzhou / @zhoumm
+ * @version 1.5
+ */
+
+// 大小设置, 基础高度改为16px
+@font-size: 16px;        // 基础文字大小，不能是相对单位
+@line-height: 2;         // 行高
+@line: 32px;
+@code-font-size: 14px;   // 必须小于等于14，否则会导致整行的行高+1
+@pre-font-size: 14px;    // pre标签内的code文字大小
+@pre-line-height: 16px;
+@h1-font-size: 28px;
+@h1-line-height: 16px + 32px;
+@h2-font-size: 21px;
+@h3-font-size: 18px;
+@h4-font-size: 16px;
+
+@import 'entry-config.less';
+
+.rounded-corners (@radius: 5px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -ms-border-radius: @radius;
+    -o-border-radius: @radius;
+    border-radius: @radius;
+}
+.box-sizing (@box: border-box) {
+    -webkit-box-sizing: @box;
+    -moz-box-sizing: @box;
+    -ms-box-sizing: @box;
+    -o-box-sizing: @box;
+    box-sizing: @box;
+}
+
+// 段落开头空两个中文
+.start-with2word () {}
+.start-with2word () when (@use-indent = true) {
+    // text-indent: 2em; 避免继承，故不用
+    &:before {
+        content: '\3000\3000';
+        display: inline;
+    }
+}
+.no-start-with2word () {}
+.no-start-with2word () when (@use-indent = true) {
+    &:before {
+        content: '';
+    }
+}
+
+// 背景线性渐变
+.background-linear-gradient (@pos: left, @start: rgba(255,255,255,0), @middle: white, @end: white) {
+    background-image: -webkit-linear-gradient(@pos, @start 0%, @middle 80%, @end 100%);
+    background-image: -moz-linear-gradient(@pos, @start 0%, @middle 80%, @end 100%);
+    background-image: -ms-linear-gradient(@pos, @start 0%, @middle 80%, @end 100%);
+    background-image: -o-linear-gradient(@pos, @start 0%, @middle 80%, @end 100%);
+    background-image: linear-gradient(@pos, @start 0%, @middle 80%, @end 100%);
+}
+
+// 分栏样式
+.column (@width, @gap, @rule) {
+    // opera and IE 10+ support without prefix
+    -webkit-column-width: @width;
+    -webkit-column-gap: @gap;
+    -webkit-column-rule: @rule;
+       -moz-column-width: @width;
+       -moz-column-gap: @gap;
+       -moz-column-rule: @rule;
+            column-width: @width;
+            column-gap: @gap;
+            column-rule: @rule;
+}
+
+// 左中右布局相关样式的文字
+.layout-text () {
+    text-align: left;
+}
+.layout-text () when (@layout = center) {
+    text-align: center;
+}
+.layout-text () when (@layout = right) {
+    text-align: right;
+}
+
+// 左中右布局相关样式的块级元素
+.layout-box () {
+    margin-left: 0;
+    margin-right: auto;
+}
+.layout-box () when (@layout = center) {
+    margin-left: auto;
+    margin-right: auto;
+}
+.layout-box () when (@layout = right) {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+// 左中右布局相关样式的table
+.layout-table () {
+    margin-left: 1em;
+}
+.layout-table () when (@layout = center) {
+    margin-left: auto;
+}
+.layout-table () when (@layout = right) {
+    margin-left: auto;
+    margin-right: 1em;
+}
+
+// 利用before，after来伪装上下边框
+// 确保可以符合vertical rhythm
+/*
+ * bug 太多，用途不够广泛
+ * 对于pre th td这样的标签就会在firefox下有很多bug
+.fake-border-top-bottom (@color: #CCC, @width: 1px) {
+    position: relative;
+    &:before,
+    &:after {
+        position: absolute;
+        z-index: 1;
+        content: '';
+        width: 100%;
+        height: @width;
+        background-color: @color;
+    }
+    &:before {
+        top: 0;
+        left: 0;
+    }
+    &:after {
+        bottom: 0;
+        left: 0;
+    }
+}
+.fake-border-bottom (@color: #CCC, @width: 1px) {
+    position: relative;
+    &:after {
+        position: absolute;
+        z-index: 1;
+        content: '';
+        width: 100%;
+        height: @width;
+        background-color: @color;
+    }
+    &:after {
+        bottom: 0;
+        left: 0;
+    }
+}
+.fake-border-top (@color: #CCC, @width: 1px) {
+    position: relative;
+    &:before {
+        position: absolute;
+        z-index: 1;
+        content: '';
+        width: 100%;
+        height: @width;
+        background-color: @color;
+    }
+    &:before {
+        top: 0;
+        left: 0;
+    }
+}
+*/
+
+@import 'entry-content.less';
+@import 'entry-opt.less';

@@ -1,0 +1,396 @@
+/* ==========================================================================
+   Entry content
+   ========================================================================== */
+.ext-entry() {
+    margin-top: 0;
+    margin-bottom: 0;
+    .layout-box;
+    max-width: @content-width - @font-size*2;
+    padding: 0 @font-size;
+    line-height: @line-height;
+    color: @word-color;
+    word-wrap: break-word;
+    font-size: @font-size;
+    font-family: @font-family;
+    -webkit-font-smoothing:antialiased;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+
+    /* ==========
+       Typography
+       ========== */
+    div, p, blockquote, pre,
+    ul, ol, table, figure,
+    section, article, header, footer {
+        margin: 0;
+        padding: 0;
+        // & + * { // 这是为了优化 “标签和匿名文本” 之间的间距
+            margin-top: (@line/2);
+            margin-bottom: (@line/2);
+        // }
+        &:first-child {
+            margin-top: 0;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    // ul, ol 内部的元素
+    ul, ol {
+        div, p, blockquote, pre,
+        ul, ol, table, figure,
+        iframe,
+        section, article, header, footer {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    // iframe为直接子元素时设置为block
+    > iframe {
+        display: block;  // for iframe
+        margin-top: (@line/2);
+        margin-bottom: (@line/2);
+    }
+
+    > img,
+    > video {
+        margin-top: (@line/2);
+        margin-bottom: (@line/2);
+        display: block;
+    }
+
+    // h*
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    > h3, > h4, > h5, > h6 {
+        margin-top: @line;
+    }
+    > h1, > h2 {
+        margin-top: (@line*2);
+    }
+    h1, h2, h3, h4, h5, h6 {
+        & + * {
+            margin-top: 0;  // 此样式必须在其他margin-top样式后面，以便覆盖
+        }
+    }
+
+
+    /* === 块元素 === */
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: inherit;
+        color: @title-color;
+        background-color: @title-back-color;
+        a {
+            color: @title-color;
+        }
+        a, em, u, abbr[title] {
+            border-bottom-color: @title-color;
+        }
+    }
+    h1 {
+        font-size: @h1-font-size;
+        line-height: @h1-line-height;
+        text-align: @h1-text-align;
+    }
+    h2 {
+        font-size: @h2-font-size;
+        line-height: @line;
+        text-align: @h2-text-align;
+    }
+    h3 {
+        font-size: @h3-font-size;
+        line-height: @line;
+        text-align: @h3-text-align;
+    }
+    h4, h5, h6 {
+        line-height: @line;
+        // .start-with2word;
+        font-size: @h4-font-size;
+        text-align: @h4-text-align;
+    }
+    p, div {
+        .start-with2word;
+    }
+    blockquote {
+        position: relative;
+        padding: 0 0 0 (@font-size - 5);
+        margin: @line/2 0;
+        font-family: @quote-font-family;
+        border-left: 5px solid lighten(@word-color, 50%);
+        div, p {
+            .no-start-with2word;
+        }
+    }
+    li blockquote {
+        margin-left: -(@line/2 + 5);
+    }
+    pre {
+        padding: @line/2-1 @font-size;
+        line-height: @pre-line-height;
+        font-size: @pre-font-size;
+        white-space: pre;
+        word-wrap: normal;  // reset
+        overflow: auto;
+        font-family: @pre-font-family;
+        border: 1px solid @pre-border-color;
+        border-right: none;
+        border-left: none;
+        background-color: @pre-back-color;
+    }
+    ul, ol {
+        padding-left: 2 * @font-size;
+        li {
+            margin: 0;
+            padding: 0;
+            // 如果是inside，且li第一个元素是block元素，那么Firefox下会移到下一行
+            list-style-position: outside;
+        }
+    }
+    ul li {
+        list-style-type: square;
+        ul li {
+            list-style-type: disc;
+            ul li {
+                list-style-type: circle;
+            }
+        }
+    }
+    ol li {
+        list-style-type: decimal;
+        ol li {
+            list-style-type: upper-roman;
+            ol li {
+                list-style-type: lower-roman;
+            }
+        }
+    }
+    li > ul, li > ol {
+        padding-left: 2 * @font-size;
+    }
+    li > p:first-child, li > div:first-child {
+        .no-start-with2word;
+    }
+    hr {
+        position: relative;
+        padding-top: @line;
+        margin-top: -2px;
+        margin-bottom: @line * 2;
+        // IE <= 9下如果margin-left: 0; margin-right: 0;
+        // 那么会导致hr居中，而不是靠左
+        height: 0;
+        background: none;
+        border: none;
+        // 这两像素导致它不是绝对的Vertical Rhythm
+        border-bottom: 2px dashed @hr-color;
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            width: 30%;
+            height: 2px;
+            pointer-events: none;
+        }
+        &:before {
+            left: 0;
+            .background-linear-gradient(right, rgba(255,255,255,0), white, white);
+        }
+        &:after {
+            right: 0;
+            .background-linear-gradient(left, rgba(255,255,255,0), white, white);
+        }
+    }
+    table {
+        display: table;
+        padding: 0;
+        margin-left: auto;
+        margin-right: auto;
+        min-width: @content-width / 2;
+        border-collapse: collapse;
+        border-spacing: 0;
+        .rounded-corners(0.5em);
+        caption {
+            padding: 0;
+        }
+        thead {
+            th {
+                text-align: left;
+            }
+        }
+        tbody {
+            margin: 0 @font-size;
+            tr:nth-child(odd) {
+                td, th {
+                    background-color: @table-highlight-back-color;
+                }
+            }
+            tr:last-child {
+                td, th {
+                    padding-bottom: @line/4 - 2;
+                }
+            }
+        }
+        td, th {
+            padding: @line/4 @font-size @line/4-1;
+            border: 1px solid @table-border-color;
+        }
+    }
+
+
+    /* === 行内元素 === */
+    iframe {
+        vertical-align: text-bottom;
+    }
+    a {
+        padding-bottom: 0.025em;
+        color: @link-color;
+        text-decoration: none;
+        border-bottom-color: lighten(@link-color, 10%);
+        &:focus {
+            outline: thin dotted;
+        }
+        &:visited {
+            color: @link-visited-color;
+            border-bottom-color: @link-visited-color;
+        }
+        &:hover {
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+        }
+        &:hover,
+        &:active {
+            outline: 0;
+        }
+    }
+    /* 强调 */
+    b,
+    strong {
+        font-weight: bold;
+    }
+    u {
+        padding-bottom: .05em;
+        font-style: inherit;
+        font-weight: inherit;
+        text-decoration: inherit;
+        border-bottom: 1px solid lighten(@word-color, 30%);
+    }
+    u + u {
+        margin-left: 0.125em;
+    }
+    em {
+        font-style: inherit;
+        font-weight: inherit;
+        text-decoration: inherit;
+        -webkit-text-emphasis: filled circle;
+        -moz-text-emphasis: filled circle;
+        -ms-text-emphasis: filled circle;
+        text-emphasis: filled circle;
+        -webkit-text-emphasis-position: under;
+        -moz-text-emphasis-position: under;
+        -ms-text-emphasis-position: under;
+        text-emphasis-position: under;
+    }
+    /* code */
+    code {
+        font-family: monospace;
+        font-size: inherit;
+        color: @code-color;
+        background-color: @code-back-color;
+    }
+    pre code {
+        padding: 0;
+        margin: 0;
+        font-family: @pre-font-family;
+        font-size: @pre-font-size;
+        color: @word-color;
+        background: none;
+        border: none;
+    }
+    /* image & video */
+    img, video {
+        max-width: 100%; // 限宽
+        border: 0;
+    }
+    figure {
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+        figcaption {
+            display: block;
+            text-align: center;
+            font-style: italic;
+        }
+    }
+    /* 书名号(han.css) */
+    cite {
+        font-style: inherit;
+        &:before,
+        &:after {
+            content: "\300a";
+            line-height: inherit;
+        }
+        &:after {
+            content: "\300b";
+        }
+    }
+    /* 缩写 */
+    abbr[title] {
+        padding-bottom: 0.05em;
+        cursor: help;
+        border-bottom: 1px dotted @word-color;
+    }
+    /* 定义 */
+    dfn {
+        font-style: italic;
+    }
+    /* 标记 */
+    mark {
+        background: @mark-back-color;
+        color: @word-color;
+    }
+    /* 行内引用 */
+    q {
+        quotes: "\201C" "\201D" "\2018" "\2019";
+    }
+    /* 旁注 */
+    small {
+        font-size: 80%;
+    }
+    /* 上下标 */
+    sub, sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+    }
+    sup {
+        top: -0.5em;
+    }
+    sub {
+        bottom: -0.25em;
+    }
+
+    /* disqus支持 */
+    #disqus_thread {
+        margin-top: @line;
+    }
+}
+
+// remove padding/margin/border-radius when using transparent as @code-back-color
+.ext-entry() when not (@code-back-color = transparent) {
+    code {
+        padding: 0.15em 0.25em;
+        margin: 0 0.25em;
+        font-size: @code-font-size;
+        .rounded-corners(0.25em);
+    }
+}
+

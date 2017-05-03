@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Entry.css</title>
+  <meta name="Keywords" content="Entry.css,css,vertical rhythm,baseline,中文文章,中文排版,博客样式,约束验证"/>
+  <meta name="Description" content="Entry.css 中文文章样式，帮助你快速搭建中文博客主题。"/>
+  <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+  <link rel="stylesheet" href="assets/prism.css" />
+  <link rel="stylesheet" href="bin/entry.css" />
+</head>
+<body>
+<div class="entry">
+<h1>中文排版二三事</h1>
+<p>前段时间一直在折腾中文排版相关的事情，自认为结果还算不错😄。故开源之，即是<a href="http://nodejs.in/Entry.css" target="_blank">Entry.css</a>。这是一个可配置的、更适合阅读的中文文章样式库，可以用来快速搭建中文博客主题或是用于项目文档的样式。在这篇博文中会介绍下在做这个库过程中学到的一些中文排版知识，以及它的特色。</p>
+<hr/>
+<h2>垂直的韵律</h2>
+<p>Typography大师<a href="http://en.wikipedia.org/wiki/Robert_Bringhurst">Robert Bringhurst</a>&nbsp;(<a href="http://www.amazon.com/Elements-Typographic-Style-Robert-Bringhurst/dp/0881791326">The Elements of Typographic Style</a>一书的作者)曾经说：</p>
+<blockquote><p>Space in typography is like time in music. It is infinitely divisible, but a few proportional intervals can be much more useful than a limitless choice of arbitrary quantities.</p>
+<p><b>排版</b>中的空间就想音乐中的时间一样。他是无限整除的，但是<em>按比例的间隔</em>比起毫无限制的使用任意大小要有用很多。</p></blockquote>
+<p>在做web开发和设计中经常会用到网格。它即解决了统一性，也避免了我们在排版时纠结那一两个像素的位置摆放。可惜网格只能解决水平方向的排版布局，在垂直方向上一直没有这样的技术，全仰仗设计师大大的美感了。不过最近出现了<a href="http://baselinecss.com" target="_blank">baselinecss</a>这样的css库，它类似于<a href="http://960.gs" target="_blank">960 grid</a>，提供了一个css库以及一些psd磨版。它是基于vertical rhythm原则设计的，解决了垂直方向上的排版布局。</p>
+<p>Vertical Rhythm可译成<em>垂直的旋律</em>。它的排版思路是垂直方向上各行文字的行高是一个基础数值的n倍，n是正整数。一般情况下，我们会把基础数值设置成基本行高。这样的限制可以让文字的布局变得更美观，且易于阅读。特别是对于有很多文字的页面，减少视觉疲劳很重要。</p>
+<p><iframe style="width: 100%; height: 300px;" src="http://jsfiddle.net/zmmbreeze/6R79g/embedded/result,css,html/" height="240" width="320" frameborder="0"></iframe></p>
+<p>上面那个样例采用了14px/28px和21px/28px这两种字体大小/行高样式。对于中文来说看起来挺合适。<a href="http://www.qianduan.net/css-baseline-road.html" target="_blank">基线之道</a>这篇文章中也提到了另外一种比例：16px/22px ，28px/33px，40px/44px。它的基础数值是11px，所以也并不需要拘泥于“基础数值是基本文字的行高”这条。实际上我们需要遵守的规则是：</p>
+<blockquote><p>按照一定比例的间隔，让阅读更加舒适。</p></blockquote>
+<p>这看起来这是一件挺简单的事情，但是实际操作起来还是会有很多问题的。于是涌现了很多相关工具，辅助你开发这样拥有美妙旋律的网站。例如：</p>
+<ol>
+<li><a href="http://keyes.ie/things/baseliner/" target="_blank">baseliner.js</a>是一个js库帮助你在页面上绘制固定间隔的横线</li>
+<li><a href="http://basehold.it/">basehold.it</a>&nbsp;是一个类似<a href="http://hold.it/">hold.it</a>的服务，可以提供用于绘制横线的css或背景图片</li>
+<li><a href="https://github.com/daneden/Baseline.js" target="_blank">baseline.js</a>是一个js库用于确保外部资源，例如图片的高度是基础数值的n倍。不过这个库还有不少bug</li>
+</ol>
+<p>开发时你还会用到些复杂情况。</p>
+<h3>边距与边框（em与px）</h3>
+<p>当我们需要设置上下各一像素边框时，就会导致有两像素多余。旋律就会被打破。同样上下padding与margin都会有这个问题。我们可以设置上下padding/margin/border之和为基础数值的正整数倍。</p>
+<p>对于基于px单位的情况，这样处理还算比较容易，只是加减法而已。如果你是用em这样的相对单位呢？你的border如果实际上只需要1px，字体大小为14px。那么你需要设置border为1/14em。如果你不想支持旧浏览器，那么你还可以用伪元素after/before来伪装上下border。</p>
+<pre><code class="language-css">.fake-border-top-bottom (@color: #CCC, @width: 1px) {
+    position: relative;
+    &:before,
+    &:after {
+        position: absolute;
+        z-index: 1;
+        content: '';
+        width: 100%;
+        height: @width;
+        background-color: @color;
+    }
+    &:before {
+        top: 0;
+        left: 0;
+    }
+    &:after {
+        bottom: 0;
+        left: 0;
+    }
+}</code></pre>
+<p>可惜这种方法对img这样没有after/before伪元素的标签不起作用，对于pre、table这样的标签也有些小bug。当然对于固定高度的元素还可以用box-sizing限制死高度。</p>
+<p>最后你还会遇到浏览器对于em单位计算不精确导致1像素的偏差。我本来也打算基于em来写entry.css，结果总是遇到chrome浏览器在处理计算时的bug。后来干脆换成了px，当然也损失了对于缩放情况的优化。</p>
+<h3>外部资源</h3>
+<p>更多会遭遇的麻烦是外部资源的高度问题。比如你的文章中可以引入图片，恰巧你又不知道高度的确定值，那么很可能图片会打破旋律。对此没有什么特别好的办法，使用js是我能想到的唯一方法。于是基于<a href="https://github.com/daneden/Baseline.js" target="_blank">baseline.js</a>库来设置外部资源的高度，如下：</p>
+<pre><code class="language-javascript">// 这是standalone版本的baseline.js
+baseline.init('.entry img, .entry iframe', 28);</code></pre>
+<p>其实在我写这篇文章的时候这个库有不少bug，用之前先看下github上别人的pull request。</p>
+<h3>缩放因子</h3>
+<p>最后还有个问题，真的仅仅凭借<code>p {line-height: 28px;}</code>一句就可以确保p的行高是28px吗？看这个例子：</p>
+<p><iframe style="width: 100%; height: 300px;" src="http://jsfiddle.net/zmmbreeze/6R79g/1/embedded/result,css,html/" height="240" width="320" frameborder="0"></iframe></p>
+<p>p标签中有一个small标签，这时p标签的整体高度是57px，不是行高56px(28px*2)的。这是因为small继承得到行高为28px，然后small与匿名文本一起按照baseline摆放。行高最终是通过一行之上的最高边界与最低边界确定的。而small的文字比匿名文本小，于是计算就可以知道行高就会有可能超过28px。理论上可以计算：(28-14)/2 + 14 + (28-10)/2 = 30，但在safari上实际得到的结果确是29px。对此还没搞明白为什么。后来找到的解决方案是使用“缩放因子”而不是绝对数值，即<code>line-height:2</code>。</p>
+<p><iframe style="width: 100%; height: 300px;" src="http://jsfiddle.net/zmmbreeze/6R79g/2/embedded/result,css,html/" height="240" width="320" frameborder="0"></iframe></p>
+<p>当然如果有行内元素的行内块高度超过基础数值也会打破旋律。对于这种情况我还没有比较好的解决方案。</p>
+<h2>样式的优化</h2>
+<p>Entry.css也考虑到了针对中文阅读做些特殊优化，比如下划线样式。众所周知，下划线有个很严重的问题是：使用某些字体时，下划线会和文字粘在一起。例如中文的“十”字和下划线粘连的时候就会造成“十”和“士”两字难以区分。Entry.css使用了border-bottom来模拟下划线样式。除此之外，对于相邻的两个下划线样式还会设置一些间隔，避免下划线粘连。</p>
+<p><a href="http://mzhou.me/?attachment_id=95881#main"><img class="alignnone size-full wp-image-95881" title="屏幕快照 2013-01-20 下午7.29.39" alt="" src="http://mzhou.me/wp-content/uploads/2013/01/屏幕快照-2013-01-20-下午7.29.39.png" width="111" height="33"></a></p>
+<p>如果文字和下划线的颜色一样，人的视觉误差会造成错觉：让人感觉下划线的颜色更深一些。于是Entry.css使用了less css中的lighten方法，降低了下划线的颜色。</p>
+<p>对于中文缩近，并没有采用<code>text-indent</code>来实现，因为其默认继承的特性并不是我所期望的。所以采用了如下方法：</p>
+<pre><code class="language-css">.start-with2word () {
+    // text-indent: 2em; 避免继承，故不用
+    &:before {
+        content: '　　';
+        display: inline;
+    }
+}</code></pre>
+<p>使用了伪元素before实现了两个中文字的缩近。</p>
+<p>Entry.css还提供了“书名号、缩写、着重符、旁注、上下标等等”这样的特殊样式。可以参考下<a href="http://nodejs.in/Entry.css/document.html" target="_blank">Entry.css的文档</a>。</p>
+<h2>大小与适应性</h2>
+<p>以前我在写样式的时候觉得一行之上显示的文字应该尽量多，后来发现一行之上的文字太多反而会影响到自己阅读的耐心，让自己的眼睛变的很累。于是我开始思考一行放多少字才算合适。后来我通过纸质书籍找到了一个合适的数值：40。大概统计了身边十本书籍之后，发现一行之上的中文大概都在40字左右。</p>
+<p>在写Entry.css之前就已经设计好了它要支持小屏幕，于是在限制宽度的时候都使用了max-width，而不是width。最大宽度设置成了@font-size * 42，在左右各留一个字大小的空间。</p>
+<p>对于基础文字大小，我设置成了14px。主要是综合了各种默认字体在各个系统中的样子，觉得14px还算比较均衡的一个数值，再大的话可能会导致在使用特殊字体时变得特别难看。当然你也可以使用typekit、justfont、Typesquare这样的服务，使用在线字体。</p>
+<h2>自定义</h2>
+<p>对于这点不做过多说明了。因为Entry.css是基于less写的，所以使用了less提供的变量功能实现了自定义配置功能。Entry.css提供了基础的左、中、右三种布局方式。又因为对于配色这块不太了解，所以移除了最初默认提供的标题背景配色。期待大家可以提供很棒的配色～</p>
+<p>最后如果你有什么喜欢的样式，或是觉得需要的功能，更或是发现了bug，请提交<a href="https://github.com/zmmbreeze/Entry.css/issues" target="_blank">issue</a>给我。Feel free to use it～</p>
+</div>
+<script src="assets/prism.js"></script>
+<script>// ga
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-36422454-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();</script>
+</body>
+</html>

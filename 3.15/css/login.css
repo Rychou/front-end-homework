@@ -1,0 +1,113 @@
+body{
+		background: url("../img/bg8.png") no-repeat ;
+		background-size: cover;
+
+		width: 100%;
+		height: 300px;
+	}
+	
+	#login{
+		width: 300px;
+		height: 200px;
+		margin: 300px auto;
+
+
+	}
+	input{
+		width: 210px;
+		padding: 10px;
+		padding-left: 20px;
+		padding-right: 30px;
+		height: 20px;
+		margin-bottom: 10px;
+		background: #2D2D3F;
+		outline: none;
+		border: none;
+		color: white;
+		border-radius:0 5px 5px 0;
+
+	}
+	#login a{
+		display: block;
+		text-align: center;
+		width: 300px;
+		height: 30px;
+		line-height: 30px;
+		border-radius: 5px;
+		color: white;
+		text-decoration: none;
+		margin-bottom: 10px;
+		clear: both;
+	}
+	#h1{
+		color: white;
+		text-shadow: 0 0 15px;
+		text-align: center;
+		letter-spacing: 5px;
+
+	}
+	#a1{
+		background: #2096f7;
+	}
+	#a1:hover{
+		background: #09affe;
+	}
+	#a2{
+		background: #ce33c1;
+	}
+	#a2:hover{
+		background: #ca59c0;
+	}
+	#a3{
+		opacity: 0.8;
+	}
+	#a3:hover{
+		opacity: 1;
+	}
+	#divuser{
+		position: relative;
+	}
+	i{
+		position: absolute;
+		left: 5px;
+		top: 15px;
+		font-size: 2em;
+	}
+	span{
+		display: inline-block;
+		height: 40px;
+		width: 40px;
+		background: gray;
+		float: left;
+		border-radius: 5px 0 0 5px;
+	}
+	#span1{
+		background-image: url('../img/user.png');
+		background-repeat: no-repeat;
+		background-position: center center;
+		opacity: 0.8;		
+	}
+	#span2{
+		background-image: url('../img/password.png');
+		background-repeat: no-repeat;
+		background-position: center center;		
+		opacity: 0.8;
+	}
+	#span2:hover, #span1:hover{
+		opacity: 1;	
+	}
+	#user,#pw{
+		vertical-align: middle;
+		position: relative;
+	}
+	.cha{
+		list-style-image: url("../img/cha.png");
+		position: absolute;
+		right: 0px; top: 10px; 
+		cursor:pointer;
+		opacity: 0.6;
+	}
+	.cha:hover{
+		opacity: 1;
+	}
+	

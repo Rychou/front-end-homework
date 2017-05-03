@@ -1,0 +1,108 @@
+
+@import url(../960-Grid-System-master/code/css/reset.css);
+@import url(../960-Grid-System-master/code/css/960.css);
+@import url(../960-Grid-System-master/code/css/text.css);
+	 	body{padding:0; margin:0;font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+	 		/*background-image: url(../img/bg2.png);		*/
+	 		
+	 		
+	 	}
+	 	section{
+			padding-top: 50px;
+			padding-bottom: 10px;
+		}
+	 	p{ text-indent: 2em; /*em是相对单位，2em即现在一个字大小的两倍 p标签自动缩进*/}
+		img{border-radius: 5px;
+			opacity: 0.8;
+			box-shadow: 5px 5px 10px black;
+		}
+		img:hover{opacity: 1.0;}
+		tr td:hover{border-bottom: 1px solid #6cc2ff;}
+		tr th:hover{border-bottom: 1px solid #6cc2ff;}
+		nav{
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index:999;
+			width: 100%; 
+			background: #999d9c;
+			font-size: 15px;
+			opacity: 0.9;
+		}
+		nav ul{
+			width: 600px;
+			height: 10px;
+			margin: 0 auto;
+			padding-top: 10px;
+		}
+		nav ul li {
+			/*float: left;*/
+			list-style: none;
+			
+		}
+		nav a{
+			display: block;
+			/*float: left;*/
+			width: 80px;
+			height: 35px;
+			color: white;
+			line-height: 35px;
+			background: #999d9c;
+			margin: 5px 10px;
+			text-align: center;
+			text-decoration:none;
+			border-radius: 200px 200px 200px 0px;
+			
+		}
+		nav a:hover{
+			text-decoration: none;
+			background:white;
+			box-shadow:0 0 0 2px #d3d7d4;
+			color:#778899; }
+		#sidebar{
+			position: fixed;
+			top: 100px;
+			margin-right: 50px;
+			width: 120px;
+			height: 230px;
+			background: #999d9c;
+			border-radius:10px;
+			opacity: 0.6;
+		}
+		#sidebar li{
+			list-style: none;
+			font-size: 15px;
+			margin-top: 15px ;
+			margin-bottom: 15px;
+		}
+		#sidebar li a{
+			display: block;
+			text-decoration: none;
+			width: 70px;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			color:white;
+		}
+		#sidebar li a:visited{
+			color:white;
+		}
+		#sidebar li a:hover{
+			color: #999d9c;
+			background: white;
+			border-radius: 15px 15px 15px 0;
+			box-shadow:0 0 0 2px #d3d7d4;
+		}
+
+
+		#wanlv{float: right;margin-left: 10px; margin-bottom: 10px}
+		#kobe{float: right;margin-left: 10px; margin-bottom: 10px}
+		#myself{float: right;width: 250px;height: 250px;margin-right: 100px;}
+		#welcome .inf li{ 
+			list-style-position: inside;
+			padding-left: 25px;
+			list-style: none;
+			background: url("../img/bg4.png") no-repeat 0 -26px;
+		}
+
+		

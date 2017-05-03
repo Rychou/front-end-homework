@@ -1,0 +1,69 @@
+/* ===========================================================
+   Config
+   =========================================================== */
+// 整体布局
+@layout: center;  // left | center | right
+
+// 内容区的宽度，一行建议不要超过42个字
+@content-width: @font-size * 42;
+
+// 字体设置
+/* typekit, mac, windows, linux, default */
+@font-family: "Helvetica Neue", Arial, "Hiragino Sans GB","Hiragino Sans GB W3", "Microsoft YaHei", "Wenquanyi Micro Hei", sans-serif;
+@pre-font-family: consolas, monaco, monospace;    // 文章中代码的字体
+@quote-font-family: Georgia, 'Times New Roman', STKaiti, BiauKai, KaiTi, 'DFKai-SB', 'KaiTi_GB2312', serif;
+
+// 缩进配置
+@use-indent: false;
+@h1-text-align: center;
+@h2-text-align: left;
+@h3-text-align: left;
+@h4-text-align: left;
+
+// 文字默认颜色
+@word-color: #424b50;
+
+// 标题颜色
+@title-color: #424b50;          // 文章标题在背景高亮时候文字默认的颜色
+@title-back-color: transparent; // 文章标题在背景高亮时候文字默认的背景颜色
+
+@link-color: #069;              // 普通链接颜色
+@link-highlight-color: #FFF;    // 普通链接在背景高亮时候的颜色
+@link-visited-color: #551A8B;   // 普通链接在访问过后的颜色
+@link-js-highlight-color: #FFF; // 执行js的链接颜色
+@link-js-back-color: #96B3D3;   // 执行js的链接背景色
+
+@code-color: @word-color;           // code的文字颜色
+@code-back-color: transparent;      // code的背景色
+
+@pre-back-color: #F7F7F9;       // pre的背景色
+@pre-border-color: #E1E1E8;
+
+@hr-color: #888;                // hr的颜色
+
+@table-border-color: #DDD;
+@table-highlight-back-color: #F9F9F9;   // table背景高亮颜色
+
+@img-border-color: #CCC;    // 图标边框颜色
+
+@mark-back-color: yellow;   // mark的背景色
+
+
+/* ==========================================================
+   Optional config
+   ========================================================== */
+
+
+// 多栏样式
+// 设置高度之后，显示成横向阅读
+@use-column: false;     // 设置为true的时候启用多栏样式
+@column-gap: 4em;       // 栏之间的间距
+@column-rule: none;     // eg: 1px solid #CCC; 但不是在间隔中严格居中的，而是靠着内容
+@content-height: 50em;  // 如果内容区的父元素设置了高度，则可以将此处设置为100%
+                        // 推荐一个计算方法是：想要显示的行数 * 行高 = 最终高度值em
+                        // 默认为：30行 * 1.62 = 48.6em
+
+// 标题号
+@use-title-number: true;        // 是否使用标题号
+@title-number-seperator: '.';   // 标题号分割符号，例如: 1.2.1 中的'.'
+@title-number-color: inherit;   // 标题号颜色
