@@ -1,3 +1,3 @@
 # Rychou
-this is a Rychou repository
-*[homeWork](./myhomework/) WEB作业
+
+* [homeWork](./myhomework/) WEB作业
