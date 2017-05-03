@@ -1,7 +1,7 @@
 
 
 # Rychou
-* [首页](./myhomework/index.html) 首页
+* [首页](./myhomework/index.html) 
 * [homeWork](./myhomework/) WEB作业
     * [logIn](./myhomework/logIn.html) 登录界面
     
