@@ -2,19 +2,19 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<link rel="shortcut icon" href="https://github.com/xxxsimons/Rychou/tree/master/myhomework/img/favicon.ico">
+	<title>ManbaVideo</title>
 </head>
-<link rel="stylesheet" href="./css/style.css" />
-<link rel="stylesheet" href="css/slidorion_style.css">
-<link rel="stylesheet" href="css/slidorion.css">
-<!-- <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,700' rel='stylesheet' type='text/css'> -->
-<script src="js/jquery.min.js"></script>
-<script src="js/jquery.easing.js"></script>
-<script src="js/jquery.slidorion.js"></script>
+	<link rel="stylesheet" href="./css/nav.css" />
+	<link rel="stylesheet" href="css/slidorion_style.css">
+	<link rel="stylesheet" href="css/slidorion.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.easing.js"></script>
+	<script src="js/jquery.slidorion.js"></script>
 <body>
 	<nav >
 		<ul>
-			<img id="logo" src="https://www.freelogoservices.com/api/main/images/1j+ojl1FOMkX9WypfBejwWeomKrZ+BpNnhvK3zlpbjlfsFE10WV4i...Nv...P4zKBoH4FE=" alt="">
+			<img id="logo" src="img/logo.jpg" alt="">
 			<li class="grid_2"> <a href="#welcome" name="a1">首页</a></li>
 			<li class="grid_2">  <a href="#hobit" name="a1">个人爱好</a></li>
 			<li class="grid_2"> <a href="myinf.html">自我介绍</a></li>
@@ -26,13 +26,13 @@
 	<div id="slidorion">
     <div id="slider">
         <div class="slider-image" rel="section1">
-            <img src="http://demo.htmleaf.com/1410/201410071644/img/kung-fu-panda.jpg" width="500" height="400" />
+            <img src="http://demo.htmleaf.com/1410/201410071644/img/kung-fu-panda.jpg" width="588" height="460" />
         </div>
         <div class="slider-image" rel="section2">
-            <img src="http://demo.htmleaf.com/1410/201410071644/img/the-dark-knight.jpg" width="500" height="400" />
+            <img src="http://demo.htmleaf.com/1410/201410071644/img/the-dark-knight.jpg" width="588" height="460" />
         </div>
         <div class="slider-image" rel="section3">
-            <img src="http://demo.htmleaf.com/1410/201410071644/img/hot-fuzz.jpg" width="500" height="400" />
+            <img src="http://demo.htmleaf.com/1410/201410071644/img/hot-fuzz.jpg" width="588" height="460" />
         </div>
     </div>
     <div id="accordion">
@@ -52,25 +52,82 @@
 				<a href="http://www.imdb.com/title/tt0425112/">Read more</a>
 			</div>
 		</div>
-	</div> 
+	</div>  
+	<div class="container">
+		<div class="head">
+			<div class="guide">热门电影</div>
+		</div>
+		<div class="video">
+			<span class="quality">HD</span>
+			<span></span>
+			<img src="https://img.gocdn.online/2017/04/28/poster/5a08e94ba02118f22dc30f298c603210-guardians-of-the-galaxy-vol-2.jpg" alt="">
+		</div>
+		<div class="video">
+			<span class="quality">HD</span>
+			<img src="https://img.gocdn.online/2017/04/18/poster/12700a5c302227ebe806f963574bcb72-the-guardians.jpg" alt="">
+		</div>
+		<div class="video">
+			<span class="quality">HD</span>
+			<img src="https://img.gocdn.online/2017/04/14/poster/5802ca094d8fa31175332f9bc02c6dca-before-i-fall.jpg" alt="">
+		</div>
+		<div class="video">
+			<span class="quality">HD</span>
+			<img src="https://img.gocdn.online/2017/04/14/poster/b0c21abe1026bc6f3b4a15d7c87ece8c-18-personal-shopper-2016.jpg" alt="">
+		</div>
+		<div class="video">
+			<span class="quality">HD</span>
+			<img src="https://img.gocdn.online/2017/04/14/poster/004c53f40f59823ab8f1f31f5f723e69-the-fate-of-the-furious.jpg" alt="">
+		</div>
+		<div class="video">
+			<span class="quality">HD</span>
+			<img src="https://img.gocdn.online/2017/04/10/poster/d47cf1b287a0017012b36c3673997dbe-smurfs-the-lost-village.jpg" alt="">
+		</div>
+		<div class="video">
+			<span class="quality">HD</span>
+			<img src="https://img.gocdn.online/2017/04/01/poster/f4c92be1cd6c404d413f16fc6c5b1281-the-boss-baby.jpg" alt="">
+		</div>
+		<div class="video">
+			<span class="quality">HD</span>
+			<img src="https://img.gocdn.online/2017/03/31/poster/fc45fb1b8883c831d4d74d9e745652a8-power-rangers.jpg" alt="">
+		</div>
+	</div>
 </div>
-	<script>
+
+<script>
 	$(document).ready(function(){
 	    $('#slidorion').slidorion();
 	});
 	</script>
-	<script>
-$(document).ready(function(){
-    $('#slidorion').slidorion({
-        speed: 500,
-        interval: 4000,
-        first: section2,
-        effect: 'overRight',
+<script>
+	$(document).ready(function(){
+	    $('#slidorion').slidorion({
+	        speed: 500,
+	        interval: 4000,
+	        first: section2,
+	        effect: 'overRight',
 
 
-    });
-});
+	    });
+	});
 </script>
+<script type="text/javascript">
+    // JS实现选项卡切换
+    var myTab = document.getElementById("tab");    //整个div
+    var myUl = myTab.getElementsByTagName("ul")[0];//一个节点
+    var myLi = myUl.getElementsByTagName("li");    //数组
+    var myDiv = myTab.getElementsByTagName("div"); //数组
 
+    for(var i = 0; i<myLi.length;i++){
+        myLi[i].index = i;
+        myLi[i].onclick = function(){
+            for(var j = 0; j < myLi.length; j++){
+                myLi[j].className="off";
+                myDiv[j].className = "hide";
+            }
+            this.className = "on";
+            myDiv[this.index].className = "show";
+        }
+      }
+    </script>
 </body>
 </html>
