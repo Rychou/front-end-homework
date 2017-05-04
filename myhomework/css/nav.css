@@ -12,7 +12,7 @@ nav{
 			height: 60px;
 			font-size: 15px;
 			background: white;
-			
+
 		}
 		nav ul{
 			width: 600px;
@@ -27,7 +27,6 @@ nav{
 		}
 		nav a{
 			display: block;
-			/*float: left;*/
 			width: 80px;
 			height: 35px;
 			color: black;
@@ -37,7 +36,7 @@ nav{
 			text-decoration:none;
 			font-weight: bold;
 			font-family: "微软雅黑";
-			font-size: 1.1em;
+			font-size: 16px;
 		}
 		nav a:hover{
 			text-decoration: none;
