@@ -4,22 +4,21 @@ Stylesheet for slidorion
 
  */
 #slidorion {
-	width: 768px;			/* Set to slidorion width. Is equal to #slider + #accordion width */
-	height: 400px;			/* Set to slidorion height. Is equal to #slider and #accordion height */
+	width: 888px;			/* Set to slidorion width. Is equal to #slider + #accordion width */
+	height: 460px;			/* Set to slidorion height. Is equal to #slider and #accordion height */
 	position: relative;
-	left: 50%;
-		margin-left: -384px;
+	margin: 0 auto;
 	padding: 10px;
 	background: #cbcbcb;
 	border: 1px solid #bbb;
 	-webkit-box-shadow: 0 0 34px #bbb;
 	-moz-box-shadow: 0 0 34px #bbb;
-	box-shadow: 0 0 34px #bbb;
+	box-shadow:0 5px 15px black;
 }
 
 #slider {
-	width: 488px;			/* Set to slider width */
-	height: 400px;			/* Set to slider height */
+	width: 588px;			/* Set to slider width */
+	height: 460px;			/* Set to slider height */
 	position: relative;
 	float: left;
 	overflow: hidden;		/* Hides the animations */
@@ -30,8 +29,8 @@ Stylesheet for slidorion
 }
 
 #accordion {
-	width: 280px;			/* Set to accordion width */
-	height: 400px;			/* Set to image height */
+	width: 300px;			/* Set to accordion width */
+	height: 460px;			/* Set to image height */
 	font-family: Verdana;
 	background: #eee;
 	-webkit-box-shadow: -3px 0px 3px -1px rgba(51,51,51,0.3);
