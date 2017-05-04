@@ -2,7 +2,6 @@
    #main{
         width: 910px;
         margin: 0 auto;
-        margin-top: 60px;
 
         padding-top: 60px;
       }
@@ -14,11 +13,20 @@
  .container {
   margin: 30px auto;
   width: 910px;
+  height: 610px;
+  margin-bottom: 50px;
+  box-shadow:0 5px 15px black;
+ }
+ .cont_main{
+  width: 100%;
+  height: 100%;
  }
  .head{
   width: 910px;
   height: 50px;
-  border: 1px solid black;
+  position: relative;
+  border-bottom: none;
+    
  }
  .guide{
   width: 100px;
@@ -45,18 +53,31 @@
   left:100%;  
   content:""  
  }
+.seemore,.seemore:visited{
+  position: absolute;
+  right: 30px;
+  top: 15px;
+  color: black;
+}
+.seemore:hover{
+  color: gray;
+}
+ 
  .video{
   position: relative;
-   float: left;
-   width: 200px;
+   float: left; 
+   width: 198px;
    height: 260px;
-   margin: 13px;
-
+   margin: 13px 13px 0 13px;
  }
  .video img{
  border-radius: 5px;
-  width: 200px;
+  width: 198px;
   height: 260px;
+ }
+ /*图片缩放效果*/
+ .video:hover{
+  transform: scale(1.008);
  }
 .quality{
   position:absolute;
@@ -68,4 +89,37 @@
   line-height: 20px;
   text-align: center;
   border-radius: 3px;
+  font-weight: bold;
  }
+ .videoName{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    height:52px;
+    line-height: 52px;
+    background: url(https://cdn.gocdn.online/images/mask-title.png) top repeat-x;
+    z-index: 5;
+    border-radius: 0 0 5px 5px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-family: "微软雅黑";
+    letter-spacing: 1px;
+ }
+.tv{
+  position:absolute;
+  right: 8px;
+  top: 8px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background: #2B85F5; 
+  opacity: 0.8;
+  text-align: center;
+  border-radius: 100%;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+ }
+ 

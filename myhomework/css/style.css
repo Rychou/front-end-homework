@@ -5,7 +5,7 @@
 @import url(../css/nav.css);
 
 	 	body{padding:0; margin:0;font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
-	 		/*background-image: url(../img/bg2.png);		*/	
+	 		background:#ededed;		
 	 	}
 	 	section{
 			padding-top: 50px;
