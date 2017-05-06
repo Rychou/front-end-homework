@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+    <meta charset="UTF-8">
+    <title>night-mode</title>
+</head>
+<body style="background-color: rgb(255, 255, 255)">
+    <p>switch button below!</p>
+    <h1>Here</h1>
+    <button onclick="darker()">Switch</button>
+    <script type="text/javascript">
+    function darker() {
+        if (document.body.style.backgroundColor == 'rgb(255, 255, 255)') {
+
+                document.body.style.backgroundColor = 'rgb(6, 23, 37)';
+        }
+        else {
+                document.body.style.backgroundColor = 'rgb(255, 255, 255)';
+        }
+    }
+    </script>
+    
+</body>
+</html>

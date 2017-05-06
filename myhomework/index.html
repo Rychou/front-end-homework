@@ -24,18 +24,18 @@
 	</nav>
 <div id="main">
 	<div id="slidorion">
-    <div id="slider">
-        <div class="slider-image" rel="section1">
-            <img src="http://demo.htmleaf.com/1410/201410071644/img/kung-fu-panda.jpg" width="588" height="460" />
-        </div>
-        <div class="slider-image" rel="section2">
-            <img src="http://demo.htmleaf.com/1410/201410071644/img/the-dark-knight.jpg" width="588" height="460" />
-        </div>
-        <div class="slider-image" rel="section3">
-            <img src="http://demo.htmleaf.com/1410/201410071644/img/hot-fuzz.jpg" width="588" height="460" />
-        </div>
-    </div>
-    <div id="accordion">
+    	<div id="slider">
+	        <div class="slider-image" rel="section1">
+	            <img src="http://demo.htmleaf.com/1410/201410071644/img/kung-fu-panda.jpg" width="588" height="460" />
+	        </div>
+	        <div class="slider-image" rel="section2">
+	            <img src="http://demo.htmleaf.com/1410/201410071644/img/the-dark-knight.jpg" width="588" height="460" />
+	        </div>
+	        <div class="slider-image" rel="section3">
+	            <img src="http://demo.htmleaf.com/1410/201410071644/img/hot-fuzz.jpg" width="588" height="460" />
+	        </div>
+    	</div>
+    	<div id="accordion">
 			<div class="header"><a class="slider-link" rel="section1">Kung Fu Panda 2</a></div>
 			<div class="content">
 				<p>In the Valley of Peace, Po Ping is revelling in his fulfilled dreams as he serves as the fabled Dragon Warrior protecting his home with his heroes now his closest friends. However, Po and company learn that the murderous Lord Shen of Gongman City is threatening the land with a fearsome new weapon that could mean the end of kung fu forever.</p>
@@ -182,7 +182,6 @@
 		</div>
 	</div>
 </div>
-
 <script>
 	$(document).ready(function(){
 	    $('#slidorion').slidorion();
@@ -200,24 +199,5 @@
 	    });
 	});
 </script>
-<script type="text/javascript">
-    // JS实现选项卡切换
-    var myTab = document.getElementById("tab");    //整个div
-    var myUl = myTab.getElementsByTagName("ul")[0];//一个节点
-    var myLi = myUl.getElementsByTagName("li");    //数组
-    var myDiv = myTab.getElementsByTagName("div"); //数组
-
-    for(var i = 0; i<myLi.length;i++){
-        myLi[i].index = i;
-        myLi[i].onclick = function(){
-            for(var j = 0; j < myLi.length; j++){
-                myLi[j].className="off";
-                myDiv[j].className = "hide";
-            }
-            this.className = "on";
-            myDiv[this.index].className = "show";
-        }
-      }
-    </script>
 </body>
 </html>
