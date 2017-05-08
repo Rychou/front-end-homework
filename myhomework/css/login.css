@@ -1,7 +1,6 @@
 body{
-		background: url("../img/bg8.png") no-repeat ;
+		background: url("http://i.imgur.com/EBSUk3l.png") no-repeat ;
 		background-size: cover;
-
 		width: 100%;
 		height: 300px;
 	}
@@ -82,13 +81,13 @@ body{
 		border-radius: 5px 0 0 5px;
 	}
 	#span1{
-		background-image: url('../img/user.png');
+		background-image: url('http://i.imgur.com/TMqhC5G.png');
 		background-repeat: no-repeat;
 		background-position: center center;
 		opacity: 0.8;		
 	}
 	#span2{
-		background-image: url('../img/password.png');
+		background-image: url('http://i.imgur.com/Y7BohRq.png');
 		background-repeat: no-repeat;
 		background-position: center center;		
 		opacity: 0.8;
@@ -101,7 +100,7 @@ body{
 		position: relative;
 	}
 	.cha{
-		list-style-image: url("../img/cha.png");
+		list-style-image: url("http://i.imgur.com/JvY51Re.png");
 		position: absolute;
 		right: 0px; top: 10px; 
 		cursor:pointer;

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 body, html{
 	font-family: "微软雅黑";
 	background:#ededed;
@@ -23,7 +23,7 @@ body, html{
 	font-family: "微软雅黑";
 	font-size: 1.2em;
 	font-weight: bold;
-	color: #979090;
+	color: #4A72D7;
 	text-indent: 15px;
 }
 #left{
@@ -32,11 +32,13 @@ body, html{
 	height: 100%;
 	padding: 15px;
 	position: relative;
+	border-right: 1px solid black;
 }
 #right{
 	float: right;
-	width: 25%;
+	width: 30%;
 	height: 850px;
+	border-left: 1px solid black;
 }
 #video_inf{
 	width: 700px;
@@ -64,7 +66,8 @@ body, html{
 	float: right;
 	width: 250px;
 	height: 100%;
-	float: right;
+	background-image: url(http://imgur.com/9M0tniW.png);
+	background-repeat: no-repeat;
 }
 .inf_cont{
 	width: 100%;
@@ -77,6 +80,11 @@ body, html{
 .inf_right{
 	margin-left: 3px;
 }
+.inf_right a{
+	text-decoration: none;
+}
+.inf_right a:visited{color: #205FD8}
+.inf_right a:hover{text-decoration: underline;}
 #plot span{
 	color: rgb(31,110,238);
 	font-size: 1.2em;
@@ -101,7 +109,7 @@ body, html{
 	float: left;
 	margin-right: 5px;
 	margin-bottom: 5px;
-	border-radius: 5px;
+	border-radius: 2px;
 }
 #stagePhoto img:hover{
 	 transform: scale(1.018);

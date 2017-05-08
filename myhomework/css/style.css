@@ -28,7 +28,8 @@
 			height: 230px;
 			background: #999d9c;
 			border-radius:10px;
-			opacity: 0.6;
+			z-index: 99;
+			opacity: 0.9;
 		}
 		#sidebar li{
 			list-style: none;
@@ -63,7 +64,7 @@
 			list-style-position: inside;
 			padding-left: 25px;
 			list-style: none;
-			background: url("../img/bg4.png") no-repeat 0 -26px;
+			background: url("http://i.imgur.com/d8MWlza.png") no-repeat 0 -51px;
 		}
 
 		
