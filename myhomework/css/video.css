@@ -1,6 +1,8 @@
-body{
+body, html{
 	font-family: "微软雅黑";
+	background:#ededed;
 }
+ 
 #container{
 	width: 100%;
 	height: 1200px;
