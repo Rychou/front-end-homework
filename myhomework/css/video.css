@@ -1,8 +1,8 @@
+<<<<<<< HEAD
 body, html{
 	font-family: "微软雅黑";
 	background:#ededed;
 }
- 
 #container{
 	width: 100%;
 	height: 1200px;
@@ -13,13 +13,12 @@ body, html{
 	width: 80%;
 	height: 1200px;
 	padding-top: 0;
-	border: 1px solid black;
+
 }
 #header{
 	display: block;
 	width: 100%;
 	height: 50px;
-	border-bottom: 1px solid black;
 	line-height: 50px;
 	font-family: "微软雅黑";
 	font-size: 1.2em;
@@ -31,7 +30,6 @@ body, html{
 	float: left;
 	width: 65%;
 	height: 100%;
-	border-right: 1px solid black;
 	padding: 15px;
 	position: relative;
 }
@@ -39,12 +37,10 @@ body, html{
 	float: right;
 	width: 25%;
 	height: 850px;
-	border-left: 1px solid black;
 }
 #video_inf{
 	width: 700px;
 	height: 270px;
-	border: 1px solid blue;
 }
 #img{
 	height: 100%;
@@ -57,21 +53,18 @@ body, html{
 #inf{
 	width: 590px;
 	height: 100%;
-	border: 1px solid pink;
 	float: right;
 }
 #inf_left{
 	float: left;
 	width: 300px;
 	height: 100%;
-	border: 1px solid black;
 }
 #inf_right{
 	float: right;
 	width: 250px;
 	height: 100%;
 	float: right;
-	border-left: 1px solid black;
 }
 .inf_cont{
 	width: 100%;
@@ -95,4 +88,21 @@ body, html{
 	color: rgb(31,110,238);
 	font-size: 1.2em;
 	display: block;
+	clear: both;
+}
+#stagePhoto span{
+	color: rgb(31,110,238);
+	font-size: 1.2em;
+	display: block;
+}
+#stagePhoto img{
+	width: 130px;
+	height: 140px;
+	float: left;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	border-radius: 5px;
+}
+#stagePhoto img:hover{
+	 transform: scale(1.018);
 }
