@@ -5,13 +5,14 @@
 	<title>Document</title>
 	<link rel="shortcut icon" href="img/favicon.ico">
 </head>
+<link rel="stylesheet" href="http://demo.htmleaf.com/1605/201605301540/starability-minified/starability-all.min.css">
 <link rel="stylesheet" href="./css/nav.css" />
 <link rel="stylesheet" href="./css/video.css">
 <body>
 	<nav >
 		<ul>
 			<img id="logo" src="img/logo.jpg" alt="">
-			<li class="grid_1"> <a href="#welcome" name="a1">首页</a></li>
+			<li class="grid_1"> <a href="index.html" name="a1">首页</a></li>
 			<li class="grid_1">  <a href="#hobit" name="a1">个人爱好</a></li>
 			<li class="grid_1"> <a href="myinf.html">自我介绍</a></li>
 			<li class="grid_1"> <a href="js.html">JS</a></li>
@@ -70,6 +71,25 @@
 						</div>
 					</div>
 					<div id="inf_right"></div>
+				</div>
+				<div id="interest_text" style="width: 100%;height: 60px; clear: both;">
+					<a href="#" style="display: inline-block;width: 50px;height: 30px; background: rgb(37, 110, 238); float: left;text-align: center;line-height: 30px;border-radius: 5px; text-decoration: none;color: #fff;margin-right: 5px;"><span>看过</span></a>
+					<a href="#" style="display: inline-block;width: 50px;height: 30px; background: #dc185f; float: left;text-align: center;line-height: 30px;border-radius: 5px; text-decoration: none;color: #fff;"><span>想看</span></a>
+					<span style="display: inline-block;width: 50px;height: 30px; float: left;text-align: center;line-height: 30px;border-radius: 5px; text-decoration: none; font-weight: bold;color: #1376e0;">评价:</span>
+
+					<fieldset class="starability-fade">
+						
+					  <input type="radio" id="first-rate5" name="rating" value="5" />
+					  <label for="first-rate5" title="Amazing">5 stars</label>
+					  <input type="radio" id="first-rate4" name="rating" value="4" />
+					  <label for="first-rate4" title="Very good">4 stars</label>
+					  <input type="radio" id="first-rate3" name="rating" value="3" />
+					  <label for="first-rate3" title="Average">3 stars</label>
+					  <input type="radio" id="first-rate2" name="rating" value="2" />
+					  <label for="first-rate2" title="Not good">2 stars</label>
+					  <input type="radio" id="first-rate1" name="rating" value="1" />
+					  <label for="first-rate1" title="Terrible">1 star</label>
+					</fieldset>
 				</div>
 			</div>
 			<div id="plot">

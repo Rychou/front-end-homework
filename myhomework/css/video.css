@@ -42,10 +42,10 @@ body, html{
 }
 #video_inf{
 	width: 700px;
-	height: 270px;
+	height: 350px;
 }
 #img{
-	height: 100%;
+	height: 270px;
 	float: left;
 }
 #img img{
@@ -54,18 +54,18 @@ body, html{
 }
 #inf{
 	width: 590px;
-	height: 100%;
+	height: 270px;
 	float: right;
 }
 #inf_left{
 	float: left;
 	width: 300px;
-	height: 100%;
+	height:270px;
 }
 #inf_right{
 	float: right;
 	width: 250px;
-	height: 100%;
+	height: 270px;
 	background-image: url(http://imgur.com/9M0tniW.png);
 	background-repeat: no-repeat;
 }
@@ -114,3 +114,4 @@ body, html{
 #stagePhoto img:hover{
 	 transform: scale(1.018);
 }
+#interest_text a:hover{opacity: 0.9;}

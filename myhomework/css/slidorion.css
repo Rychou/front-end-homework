@@ -93,3 +93,6 @@ Stylesheet for slidorion
 .slider-image img{
 	opacity: 1;
 }
+.content p{
+	text-indent: 15px;
+}
