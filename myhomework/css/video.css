@@ -115,3 +115,48 @@ body, html{
 	 transform: scale(1.018);
 }
 #interest_text a:hover{opacity: 0.9;}
+/*评分星星*/
+		
+#rate {
+		transform: rotateY(180deg);
+		display: inline-block;
+		font-size: 25px;
+}
+
+input[type="radio"] {
+	display: none;
+}
+
+input[type="radio"]:checked + label>span,
+input[type="radio"]:checked ~ label>span,
+input[type="radio"] + label:hover > span,
+input[type="radio"] + label:hover ~ label > span {
+	color: gold;
+}
+
+input[type="radio"] + label:hover ~ label > span {
+	opacity: 0.5;
+}
+
+label>span::before {
+	content: "☆";
+}
+
+label>span::after {
+	content:"★";
+	display: none
+}
+
+input[type="radio"]:checked + label>span::before,
+input[type="radio"]:checked  ~ label > span::before,
+input[type="radio"] + label:hover > span::before,
+input[type="radio"] + label:hover   ~ label > span::before {
+	display:none;
+}
+
+input[type="radio"]:checked + label>span::after,
+input[type="radio"]:checked  ~ label > span::after,
+input[type="radio"] + label:hover>span::after, 
+input[type="radio"] + label:hover  ~ label > span::after {
+	display:inline-block;
+}
