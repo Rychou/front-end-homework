@@ -35,11 +35,49 @@ body, html{
 	border-right: 1px solid black;
 }
 #right{
+	position: relative;
 	float: right;
 	width: 30%;
 	height: 850px;
-	border-left: 1px solid black;
+	border: 1px solid black;
 }
+.title {
+	height: 32px;
+	border-bottom: 3px solid #C5C2C2;
+	bottom: -20px;
+}
+ .title h3{
+ 	display: inline-block;
+ 	font-size: 18px;
+ 	font-weight: normal;
+ 	color: #555;
+ 	padding-bottom: 5px;
+ 	border-bottom: 3px solid #32A5E7;
+ }
+ .QR_cont{
+ 	width: 250px;
+ 	height: 250px;
+ 	margin: 0 auto;
+ 	
+ 	border-radius: 5px;
+ }
+ .QR_cont img{
+ 	border-radius: 5px;
+ 	border: 5px solid #1FC733;
+ }
+ #wechat,#zhifubao{
+ 		display: block;float: left;margin-left:30px ; text-align: center; width: 50px;height: 25px;line-height: 25px; color: #fff;border-radius: 5px 5px 0 0 ;cursor: pointer;
+ }
+ .on{
+ 	 background: #1FC733;}
+ .off{
+ 	background: gray;
+ }
+ #img1{
+ }
+ #img2{
+ 	display: none;
+ }
 #video_inf{
 	width: 700px;
 	height: 350px;

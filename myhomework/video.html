@@ -80,7 +80,6 @@
 					<div id="Evaluation">
 					<span style="display: inline-block;width: 50px;height: 30px; float: left;text-align: center;line-height: 30px;border-radius: 5px; text-decoration: none; font-weight: bold;color: #1376e0;">评价:</span>
 					<div id="rate">
-
 						<input type="radio" id="start5" name="star" value="5" />
 						<label for="start5"><span></span></label>
 						
@@ -116,8 +115,36 @@
 				<iframe height=400 width=450 src='http://player.youku.com/embed/XMjU1Mjk3MTQ4MA==' frameborder=0 'allowfullscreen' style="margin:20px 30px;"></iframe>
 			</div>
 		</div>
-		<div id="right"></div>
+		<div id="right">
+			<div class="title">
+				<h3>支持本站</h3>
+			</div>
+			<div style="width: 250px;height: 300px; margin: 0 auto; margin-top: 50px;">
+				<span style="" class="on" id="wechat">微信</span>
+				<span style="" class="off" id="zhifubao">支付宝</span>
+				<div class="QR_cont">
+					<img src='http://i4.buimg.com/1949/48e44e9ad74be097.png' width="250" height="250" id="img1">
+					<img src='http://i2.muimg.com/1949/50e198ca7616899e.png' width="250" height="250" id="img2">
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
+<script>
+		var oWc = document.getElementById("wechat");
+		var oZfb = document.getElementById("zhifubao");
+		oWc.onclick = function(){
+			oWc.className = "on";
+			oZfb.className = "off";		
+			document.getElementById("img1").style.display = "block";
+			document.getElementById("img2").style.display = "none";	
+		};
+		oZfb.onclick = function(){
+			oZfb.className = "on";
+			oWc.className = "off";
+			document.getElementById("img1").style.display = "none";
+			document.getElementById("img2").style.display = "block";
+		};
+	</script>
 </body>
 </html>
