@@ -127,6 +127,10 @@
 					<img src='http://i2.muimg.com/1949/50e198ca7616899e.png' width="250" height="250" id="img2">
 				</div>
 			</div>
+			<div class="title">
+				<h3>广告推广</h3>
+				<p>然而並沒有東西</p>
+			</div>
 		</div>
 	</div>
 </div>
@@ -138,12 +142,16 @@
 			oZfb.className = "off";		
 			document.getElementById("img1").style.display = "block";
 			document.getElementById("img2").style.display = "none";	
+			oZfb.style.background = "#B2AEAE";
 		};
 		oZfb.onclick = function(){
 			oZfb.className = "on";
 			oWc.className = "off";
 			document.getElementById("img1").style.display = "none";
 			document.getElementById("img2").style.display = "block";
+			document.getElementById("img2").style.borderColor = "#32A5E7";
+			oZfb.style.background = "#32A5E7";
+
 		};
 	</script>
 </body>
