@@ -69,14 +69,76 @@
    height: 260px;
    margin: 13px 13px 0 13px;
  }
+ .mask{
+  width: 198px;
+  height: 260px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  background-color: gray;
+  border-radius: 5px;
+  text-align: left;
+transition: all 0.5s linear;
+-ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+filter: alpha(opacity=0);
+opacity: 0;
+  }
+  .mask h3,p,a{
+    filter: alpha(opacity=0);
+    opacity: 0;transform: scale(0);transform: scale(0);}
+  .mask h3{
+    text-transform: uppercase;background: transparent;
+    margin: 0 auto;
+    text-align: center;
+    width: 150px; border-bottom: 1px solid black;
+    margin-bottom: 10px;
+  }
+  .mask p{
+    overflow: hidden;
+    text-indent: 20px;
+    width: 198px;
+    height: 140px;
+  }
+  .mask a{
+    display: block;
+    width: 80px;
+    height: 40px;
+    background: black;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
  .video img{
  border-radius: 5px;
   width: 198px;
   height: 260px;
+  transform: scaleY(1);
+  transition: all 0.7s ease-in-out;
  }
  /*图片缩放效果*/
- .video:hover{
-  transform: scale(1.008);
+ .video:hover img{
+  transform: scale(0.1);
+  filter: alpha(opacity=0);
+  opacity: 0;
+ }
+ .video:hover span{
+  transform: scale(0.1);
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+ .video:hover .mask{
+filter: alpha(opacity=100);
+opacity: 1;
+ }
+ .video:hover h3,p,a{
+  transform: scale(1);
+  filter: alpha(opacity=100);
+  opacity: 1;
  }
 .quality{
   position:absolute;
@@ -89,6 +151,9 @@
   text-align: center;
   border-radius: 3px;
   font-weight: bold;
+   transform: scaleY(1);
+  transition: all 0.7s ease-in-out;
+  z-index: 10;
  }
  .videoName{
     position: absolute;
@@ -98,7 +163,7 @@
     height:52px;
     line-height: 52px;
     background: url(https://cdn.gocdn.online/images/mask-title.png) top repeat-x;
-    z-index: 5;
+    z-index: 10;
     border-radius: 0 0 5px 5px;
     text-align: center;
     color: white;

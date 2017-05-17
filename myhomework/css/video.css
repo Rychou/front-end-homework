@@ -153,6 +153,7 @@ body, html{
 	border-radius: 2px;
 }
 #stagePhoto img:hover{
+	transition: scale 1s ;
 	 transform: scale(1.018);
 }
 #interest_text a:hover{opacity: 0.9;}

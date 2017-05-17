@@ -6,11 +6,9 @@ body{
 	}
 	
 	#login{
-		width: 300px;
+		width: 400px;
 		height: 200px;
 		margin: 300px auto;
-
-
 	}
 	input{
 		width: 210px;
@@ -24,7 +22,7 @@ body{
 		border: none;
 		color: white;
 		border-radius:0 5px 5px 0;
-
+		position: relative;
 	}
 	#login a{
 		display: block;
@@ -96,6 +94,7 @@ body{
 		opacity: 1;	
 	}
 	#user,#pw{
+		width: 300px;
 		vertical-align: middle;
 		position: relative;
 	}
@@ -109,4 +108,6 @@ body{
 	.cha:hover{
 		opacity: 1;
 	}
+	p{
 	
+	}

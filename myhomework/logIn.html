@@ -37,17 +37,21 @@
 		<a href="#" id="a3">忘记密码？</a>
 		<a href="#" id="callMe" >和我联系</a>
 	</div>
-	<script src="js/canvas-nest.min.js" color="255,255,255"></script>
 	<script>
-		function(){
+	
 		var oA1 = document.getElementById('a1');
 		var oText = document.getElementById('id');
 		var oPw = document.getElementById('password');
 		var oDel1 = document.getElementById('del1');
 		var oDel2 = document.getElementById('del2');
+		var oUser = document.getElementById('user');
 		oA1.onclick = function(){
 			if (oText.value == '' || oPw.value == '') {
 				alert('用户名和密码不能为空');
+				
+			}
+			else if(oPw.value.length<6){
+				alert("密码长度不得低于六位");
 			}
 		};
 		oDel1.onclick = function(){
@@ -56,7 +60,9 @@
 		oDel2.onclick = function(){
 			oPw.value = '';
 		};
-	};
+	
 	</script>
+
+	<!-- <script src="js/canvas-nest.min.js" color="255,255,255"></script> -->
 </body>
 </html>
