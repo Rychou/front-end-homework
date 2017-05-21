@@ -38,11 +38,11 @@
 
 ## 4.技术点说明
 
-###4.1.首页热门电影动态切换效果 [链接](./myhomework/index.html)
+**4.1.首页热门电影动态切换效果 [链接](./myhomework/index.html)**
 
 该动态效果基于CSS3的transition与transform两个属性以及opacity这个属性，技术难点在于对这几个属性的掌握程度
 
-####transform 基本介绍
+**transform 基本介绍**
 
 
 >**none 表示不进行变换**；
@@ -53,7 +53,7 @@
 
 >**scale  缩放**      transform:scale(2,3) 横向放大2倍，纵向放大3倍。如等比放大写一个参数即可。
 
-####transition 基本介绍
+**transition 基本介绍**
 
 W3C标准中对CSS3的transition这是样描述的:“CSS的transition允许CSS的属性值在一定的时间区间内平滑地过渡。这种效果可以在鼠标单击、获得焦点、被点击或对元素任何改变中触发，并圆滑地以动画效果改变CSS的属性值。
 
@@ -68,11 +68,11 @@ transition 主要包含四个属性值：
 >transition- delay ：变换延迟时间
 
 	
-####opacity 基本介绍
+**opacity 基本介绍**
 
 opacity是透明度的意思，通过可以设置元素的透明度。比如说一个元素的opacity属性设置为opacity(0.3)，那该元素透明度为70%。opacity(1)代表不透明。
 
-####最终解决方案 ###
+**最终解决方案**
 
 以下为简要思路说明，一共两个div.
 
@@ -110,7 +110,7 @@ opacity是透明度的意思，通过可以设置元素的透明度。比如说�
 	 }
 
 
-###4.2 详细页的二维码选项卡效果 [链接](./myhomework/video.html)
+**4.2 详细页的二维码选项卡效果 [链接](./myhomework/video.html)**
 
 该效果主要运用了js的点击事件来改变css样式实现
 
@@ -148,7 +148,7 @@ opacity是透明度的意思，通过可以设置元素的透明度。比如说�
 		};
 	</script>
 
-###4.3登录界面样式以及简单的密码验证 [链接](./myhomework/logIn.html)
+**4.3登录界面样式以及简单的密码验证 [链接](./myhomework/logIn.html)**
 
 样式主要通过css的样式设计完成，还使用了两个矢量图标。简单的密码验证通过js。
 
