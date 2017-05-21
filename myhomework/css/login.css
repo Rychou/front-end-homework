@@ -10,7 +10,7 @@ body{
 		height: 200px;
 		margin: 300px auto;
 	}
-	input{
+	.input{
 		width: 210px;
 		padding: 10px;
 		padding-left: 20px;

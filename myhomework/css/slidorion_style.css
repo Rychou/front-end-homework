@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url(footer.css);
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -188,11 +189,6 @@ a.link, a:active, a:selected {
 	height: 50px;
 	background: #2E2C2C;
 }
-footer address{}
-.footer address span{display: block; margin-left: 40%;	color: #B3A5A5;
-}
-.footer a{color: #B3A5A5;}
-
 
 
 

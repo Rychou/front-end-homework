@@ -15,11 +15,15 @@
 		<ul>
 			<img id="logo" src="img/logo.jpg" alt="">
 			<li class="grid_1"> <a href="index.html" name="a1">首页</a></li>
-			<li class="grid_1">  <a href="#hobit" name="a1">个人爱好</a></li>
+			<li class="grid_2"> <a href="video.html" name="a1">详细页</a></li>
 			<li class="grid_1"> <a href="myinf.html">自我介绍</a></li>
-			<li class="grid_1"> <a href="js.html">JS</a></li>
 		</ul>
 		<a href="logIn.html" id="signin">LOGIN</a>
+		<a href="signUp.html" id="signup">SIGNUP</a>
+		<div class="sc">
+			<input type="text" class="search" placeholder="Search for video">
+			<li class="searchIcon" ></li>
+		</div>
 	</nav>
 <div id="container" >
 	<div id="main" >
@@ -122,8 +126,8 @@
 				<h3>支持本站</h3>
 			</div>
 			<div style="width: 250px;height: 300px; margin: 0 auto; margin-top: 50px;">
-				<span style="" class="on" id="wechat">微信</span>
-				<span style="" class="off" id="zhifubao">支付宝</span>
+				<span class="on" id="wechat">微信</span>
+				<span class="off" id="zhifubao">支付宝</span>
 				<div class="QR_cont">
 					<img src='http://i4.buimg.com/1949/48e44e9ad74be097.png' width="250" height="250" id="img1">
 					<img src='http://i2.muimg.com/1949/50e198ca7616899e.png' width="250" height="250" id="img2">
@@ -135,6 +139,7 @@
 			</div>
 		</div>
 	</div>
+	
 </div>
 <script>
 		var oWc = document.getElementById("wechat");

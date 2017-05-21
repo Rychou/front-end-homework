@@ -1,4 +1,4 @@
-
+@import url(footer.css);
 body, html{
 	font-family: "微软雅黑";
 	background:#ededed;
@@ -32,14 +32,14 @@ body, html{
 	height: 100%;
 	padding: 15px;
 	position: relative;
-	border-right: 1px solid black;
-}
+
+	}
 #right{
 	position: relative;
 	float: right;
 	width: 30%;
 	height: 850px;
-	border: 1px solid black;
+	border: 1px solid #CEC8C8;
 }
 .title {
 	height: 32px;

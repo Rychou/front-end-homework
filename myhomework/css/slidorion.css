@@ -43,7 +43,7 @@ Stylesheet for slidorion
 #accordion .header {
 	height: 36px;
 	color: #333;
-	background: #ededed;
+	background: linear-gradient(180deg,#EBEBEB, #fff);
 	background: -moz-linear-gradient(top, #ededed 59%, #dcdcdc 100%);
 	background: -webkit-linear-gradient(top, #ededed 59%,#dcdcdc 100%);
 	background: -o-linear-gradient(top, #ededed 59%,#dcdcdc 100%);

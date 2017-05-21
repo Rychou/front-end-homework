@@ -54,9 +54,9 @@ nav{
     }
     #signin{
  		position: absolute;
-    	top: 10px;
-    	right: 30px;
-    	display: block;
+ 		top: 10px;
+ 		right: 150px;
+    	display: inline-block;
     	width: 80px;
     	height: 35px;
     	line-height: 35px;
@@ -68,4 +68,48 @@ nav{
     #signin:hover{
     	opacity: 0.9;
     	transition:opacity .10s linear;
+    }
+    #signup{
+ 		position: absolute;
+ 		top: 10px;
+ 		right: 60px;
+    	display: inline-block;
+    	width: 80px;
+    	height: 35px;
+    	line-height: 35px;
+    	color: #fff;
+    	border-radius: 5px;
+    	background: #EE25BB;
+    	font-family: "微软雅黑"
+    }
+    #signup:hover{
+    	opacity: 0.9;
+    	transition:opacity .10s linear;
+    } 
+    .sc{
+    	position: absolute;
+    	top: 15px;
+    	right: 250px;
+    	width: 205px;
+    	height: 40px;
+    }
+    .search{
+    	width: 200px;
+    	height: 35px;
+    	display: inline-block;
+    	border-radius: 5px;
+    	border: 1px solid #D2CCCC;
+    	padding-left: 5px;
+    	outline: none;
+    }
+    .search:focus{outline: none;}
+    .searchIcon{
+    	list-style-image: url(http://i4.buimg.com/1949/7d74f64bbfb5d963.png);
+    	position: absolute;
+    	top: 10px;
+    	right: 0;
+		cursor: pointer;
+    }
+    .searchIcon:hover{
+    	opacity: 0.8;
     }
