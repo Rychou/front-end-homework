@@ -5,6 +5,7 @@
 	* [首页](./myhomework/index.html) 
 	* [详细页](./myhomework/video.html)
     * [登录界面](./myhomework/logIn.html) 
+    * [注册界面](./myhomework/signUp.html) 
     * [自我介绍](./myhomework/myinf.html) 
 # 开发报告 
 ## 1.策划思路
