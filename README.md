@@ -39,6 +39,7 @@
 ## 4.技术点说明
 
 ###4.1.首页热门电影动态切换效果 [链接](./myhomework/index.html)
+
 该动态效果基于CSS3的transition与transform两个属性以及opacity这个属性，技术难点在于对这几个属性的掌握程度
 
 ####transform 基本介绍
@@ -71,7 +72,7 @@ transition 主要包含四个属性值：
 
 opacity是透明度的意思，通过可以设置元素的透明度。比如说一个元素的opacity属性设置为opacity(0.3)，那该元素透明度为70%。opacity(1)代表不透明。
 
-####最终解决方案 
+####最终解决方案 ###
 
 以下为简要思路说明，一共两个div.
 
