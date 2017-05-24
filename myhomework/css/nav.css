@@ -44,6 +44,20 @@ nav{
 			color:#2C67CE; 
 			transition:  color .10s linear;
 		}
+        nav ul  .title{
+            position: absolute;
+            left: 300px;
+            top: 0;
+            width: 150px;
+            height: 60px;
+            line-height: 60px;
+            display: inline-block;
+            text-shadow: 0 0 15px;
+            font-weight: bold;
+            font-size: 1.5em;
+            letter-spacing: 2px;
+            color: #256EEE;
+        }
 	#logo{
       position: absolute;
       top: 15px;
