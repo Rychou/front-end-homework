@@ -70,7 +70,7 @@ body{
 		top: 15px;
 		font-size: 2em;
 	}
-	span{
+	#span1,#span2{
 		display: inline-block;
 		height: 40px;
 		width: 40px;

@@ -2,7 +2,8 @@
 @import url(../960-Grid-System-master/code/css/reset.css);
 @import url(../960-Grid-System-master/code/css/960.css);
 @import url(../960-Grid-System-master/code/css/text.css);
-
+@import url(footer.css);
+html,body{height:100%}
 nav{
 			position: relative;
 			top: 0;
@@ -15,18 +16,23 @@ nav{
 
 		}
 		nav ul{
-			width: 600px;
-			height: 10px;
+            position: absolute;
+            top: 0;
+            left: 50px;
+			width: 980px;
+			height: 60px;
 			margin: 0 auto;
-			padding-top: 10px;
+            line-height: 60px;
 		}
 		nav ul li {
-			/*float: left;*/
+            display: inline-block;
+			float: left;
 			list-style: none;
+            margin-left: 0;
 			
 		}
 		nav a{
-			display: block;
+			display: inline-block;
 			width: 80px;
 			height: 35px;
 			color: black;
@@ -44,68 +50,79 @@ nav{
 			color:#2C67CE; 
 			transition:  color .10s linear;
 		}
-        nav ul  .title{
-            position: absolute;
-            left: 300px;
-            top: 0;
-            width: 150px;
+        nav ul  .site-name-font{
+            width: 180px;
             height: 60px;
             line-height: 60px;
             display: inline-block;
-            text-shadow: 0 0 15px;
             font-weight: bold;
-            font-size: 1.5em;
-            letter-spacing: 2px;
+            font-size: 22px;
+            letter-spacing: 1px;
             color: #256EEE;
         }
+        .site-name{
+            display: inline-block;
+            float: left;
+            width: 180px;
+            height: 60px;
+            line-height: 60px;
+            margin-top: 0;
+            text-decoration: none;
+        }
 	#logo{
-      position: absolute;
-      top: 15px;
-      left: 10%;
-      display: block;
+      display: inline-block;
+      float: left;
       width: 70px;
       height: 40px;
+      margin-right: 0;
+      margin-top: 10px;
     }
     #signin{
- 		position: absolute;
+ 		/*position: absolute;
  		top: 10px;
- 		right: 150px;
+ 		right: 150px;*/
     	display: inline-block;
+        float: right;
     	width: 80px;
     	height: 35px;
     	line-height: 35px;
     	color: #fff;
     	border-radius: 5px;
     	background: #256EEE;
-    	font-family: "微软雅黑"
+    	font-family: "微软雅黑";
+        margin-top: 10px;
     }
     #signin:hover{
     	opacity: 0.9;
     	transition:opacity .10s linear;
     }
     #signup{
- 		position: absolute;
+ 		/*position: absolute;
  		top: 10px;
- 		right: 60px;
+ 		right: 60px;*/
     	display: inline-block;
+        float: right;
     	width: 80px;
     	height: 35px;
     	line-height: 35px;
     	color: #fff;
     	border-radius: 5px;
     	background: #EE25BB;
-    	font-family: "微软雅黑"
+    	font-family: "微软雅黑";
+        margin-top: 10px;
     }
     #signup:hover{
     	opacity: 0.9;
     	transition:opacity .10s linear;
     } 
     .sc{
-    	position: absolute;
-    	top: 15px;
-    	right: 250px;
-    	width: 205px;
+        display: inline-block;
+    	position:relative;
+        float: right;
+        max-width: 205px;
+    	width: 20%;
     	height: 40px;
+        margin-top: 10px;
     }
     .search{
     	width: 200px;

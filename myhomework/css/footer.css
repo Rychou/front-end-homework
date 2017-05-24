@@ -1,5 +1,13 @@
-footer address{}
+
 .footer address span{display: block; margin-left: 40%;	color: #B3A5A5;
 }
 .footer a{color: #B3A5A5;}
 
+.footer{
+	display: block;
+	width: 100%;
+	height: 50px;
+	background: #2E2C2C;
+	margin-top:-30px;
+	clear:both;
+}
