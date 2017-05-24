@@ -1,0 +1,175 @@
+body{
+	background:#ededed;
+}
+a{text-decoration: none;}
+a:hover{
+	text-decoration:underline;
+}
+.cont{
+	width: 1000px;
+	height: 1255px;
+	margin: 0 auto;
+	padding-top: 20px;
+}
+.header{
+	width: 70%;
+	height: 50px;
+	background: #A4A2A2;
+	line-height: 50px;
+	margin-bottom: 10px;
+}
+.header span{
+	display: block;
+	width: 80px;
+	height: 50px;
+	border-left: 5px solid #256EEE;
+	background: #A4A2A2;
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: bolder;
+	letter-spacing: 2px;
+}
+.li{
+	width:70%;
+	height: 1200px;
+	float: left;
+	
+}
+.sidebar{
+	float: right;
+	width: 28%;
+	height: 1190px;
+}
+.movie-box{
+	width: 680px;
+	height: 200px;
+	margin-bottom: 10px;
+	padding: 10px;
+	background: #CECACA;
+}
+.movie-box .left{
+	float: left;
+	width: 140px;
+	height: 200px;
+	margin-right: 20px;
+}
+.movie-box .left img{
+	width: 140px;
+	height: 200px;
+}
+.movie-box .right{
+	position: relative;
+	float: left;
+	width: 520px;
+	height: 200px;
+}
+.movie-box .right .right-top{
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #256EEE;
+	text-decoration: none;
+}
+.movie-box .right p{
+	position: absolute;
+	top: 40px;
+}
+.movie-box .right .right-bottom{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 30px;
+}
+.right-bottom span{
+	margin-right: 10px;
+}
+#director a{
+	color: #256EEE;
+}
+#type a{
+	color: #DA4343;
+}
+.next{
+	width: 500px;
+	height: 40px;
+	margin: 0 auto;
+}
+.next li{
+	display: block;
+	margin-left: 5px;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	float: left;
+	
+}
+.next li a{
+	display: block;
+	width: 40px;
+	height: 40px;
+	border: 1px solid black;
+	color: black;
+}
+.next li a:hover{
+	border: none;
+	background: black;
+	color: #fff;
+}
+.sidebar-header{
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	background: #A4A2A2;
+}
+.sidebar-header span{
+	display: block;
+	width: 80px;
+	height: 30px;
+	border-left: 5px solid #256EEE;
+	letter-spacing: 1px;
+	text-align: center;
+	font-size: 1.2em;
+	font-weight: bolder;
+}
+.content{
+	margin-top: 10px;
+	padding-left: 10px;
+	margin-bottom: 30px;
+	background:     #CECACA;
+
+}
+.content-box{
+	position: relative;
+	width: 100%;
+}
+.date{
+	position: absolute;
+	right: 0;
+}
+.cinema a{
+	color: black;
+}
+.shuxing-1{
+	display: inline-block;
+	width: 20px;
+	text-align: center;
+	background: #56b2fd;
+	color: #fff;
+}
+.shuxing-2{
+	display: inline-block;
+	width: 30px;
+	text-align: center;
+	background: #ffb94d;;
+	color: #fff;
+}
+.content-box .address{
+	color: gray;
+	font-size: 0.9em;
+}
+.money{
+	font-size: 1.3em;
+	color: #ff318c;
+}
+.qi{color: gray; font-size: 0.9em;}
